@@ -11,7 +11,6 @@ on:
 
 jobs:
   build-java:
-
     runs-on: ubuntu-latest
     
     steps:
@@ -31,8 +30,9 @@ jobs:
     - name: Build and Push Docker Image
       uses: mr-smithers-excellent/docker-build-push@v4
       with:
-        image: manjunathk165.kmr@gmail.com/demo-app
+        image: manju9945290649/demo-app      # <-- use your Docker Hub username here
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+
          
